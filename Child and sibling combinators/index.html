@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child and sibling combinators</title>
+    <style>
+        .parent > div > div{
+            color: brown;
+        }
+
+        .group1 ~ div{
+            color:red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <main class="parent">
+        parent
+        <div class="child group1">
+            child group1
+            <div class="grand-child group1">grand-child group1</div>
+        </div>
+        <div class="child group2">
+            child group2
+            <div class="grand-child group2">grand-child group2</div>
+        </div>
+        <div class="child group3">
+            child group3
+            <div class="grand-child group3">grand-child group3</div>
+        </div>
+    </main>
+
+</body>
+</html>
