@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-class</title>
+    <style>
+        input:hover{
+            background-color: red;
+        }
+        input:focus{
+            background-color: blue;
+        }
+        input:active{
+            background-color: yellow;
+        }
+
+        a:link{
+            display: block;
+            /* text-decoration: underline; */
+            text-decoration: none;
+        }
+
+        a:visited{
+            color:chocolate;
+        }
+        
+        .first-unoderlist>li:last-child{
+            font-size: 2rem;
+        }
+
+        .first-unoderlist>li:first-child{
+            color:blueviolet;
+        }
+
+        .first-unoderlist>li:only-child{
+            font-size: 2rem;
+            background-color: test;
+            color: green;
+        }
+
+        .first-unoderlist>li:only-child::after{
+            content: ' is onlychild';
+        }
+        .isEmpty:empty{
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        .isEmpty:not(:empty){
+            color:red
+        }
+
+        .parent>.child:nth-child(5){
+            color: blue;
+        }
+
+        .parent>.child:nth-child(even){
+            font-size: 2rem;
+        }
+
+        .parent>.child:nth-child(odd){
+            font-size: 3rem;
+        }
+
+        .parent>.child:nth-child(3n){
+            background-color: aquamarine;
+        }
+
+
+    </style>
+</head>
+<body>
+    <a href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-advanced-selectors#pseudo-selectors">
+        Advanced Selectors
+    </a>
+
+    <input>Input element</input>
+    <a href="http://192.168.100.2">192.168.100.2</a>
+    <ul class="first-unoderlist">
+        <li>child 01</li>
+        <li>child 02</li>
+        <li>child 03</li>
+        <li>child 04</li>
+        <li>child 05</li>
+    </ul>
+    
+    <div class="isEmpty"></div>
+
+    <!-- ol>li{child $$}.child$$[value$=$$]*5 -->
+    <ol class="parent">
+        <li class="child" value="1">child 01</li>
+        <li class="child" value="2">child 02</li>
+        <li class="child" value="3">child 03</li>
+        <li class="child" value="4">child 04</li>
+        <li class="child" value="5">child 05</li>
+        <li class="child" value="6">child 06</li>
+    </ol>
+
+
+
+</body>
+</html>
