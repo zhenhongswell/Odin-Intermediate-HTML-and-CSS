@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-element</title>
+    <style>
+        .emojify::before {
+            content: '😎 🥸 🤓';
+        }
+    
+        .emojify::after {
+            content: '🤓 🥸 😎';
+        }
+
+        ol>li::marker{
+            content:'🤓';
+            color: red;
+        }
+
+        .text::first-letter{
+            text-transform: uppercase;
+        }
+        .text::first-line{
+            background-color: aqua;
+            text-decoration: underline;
+        }
+
+        .text::selection{
+            background-color: brown;
+        }
+
+    </style>
+</head>
+<body>
+    <div> Let's 
+        <span class="emojify">emojify</span>
+        this span!
+    </div>
+    <ol>
+        <li>list 01</li>
+        <li>list 02</li>
+        <li>list 03</li>
+        <li>list 04</li>
+        <li>list 05</li>
+    </ol>
+
+    <div class="text">the ::first-letter CSS pseudo-element applies styles to the first letter of the first line of a block container, but only when not preceded by other content (such as images or inline tables).</div>
+</body>
+</html>
