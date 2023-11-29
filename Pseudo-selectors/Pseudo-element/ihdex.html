@@ -30,6 +30,38 @@
             background-color: brown;
         }
 
+        [class^='aus'] {
+            background-color: brown;
+            /* Classes are attributes too!
+                This will target any class that begins with 'aus':
+                class='austria'
+                class='australia'
+            */
+        }
+
+        [src$='.jpg'] {
+            background-color: aqua;
+            /* This will target any src attribute that ends in '.jpg':
+            src='puppy.jpg'
+            src='kitten.jpg'
+            */
+        }
+
+        [for*='ill'] {
+            background-attachment: fixed;
+            /* This will target any for attribute that has 'ill' anywhere inside it:
+            for="bill"
+            for="jill"
+            for="silly"
+            for="ill"
+            */
+        }
+
+        a[class*="L"] {
+            font-size: 3rem;
+        }
+
+
     </style>
 </head>
 <body>
@@ -46,5 +78,8 @@
     </ol>
 
     <div class="text">the ::first-letter CSS pseudo-element applies styles to the first letter of the first line of a block container, but only when not preceded by other content (such as images or inline tables).</div>
+
+    <div class="australia">attribute selector australia</div>
+    <a class="L" href="">logo</a>
 </body>
 </html>
