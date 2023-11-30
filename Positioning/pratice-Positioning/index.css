@@ -1,0 +1,24 @@
+.parent{
+    display: flex;
+    flex-direction: column;
+    background-color: chocolate;
+    padding: 10px;
+    border: 5px solid blue;
+}
+
+.child01{
+    
+    background-color: aqua;
+    position: relative;
+    left:10px;
+    z-index: 0;
+}
+
+.child02{
+    background-color: blanchedalmond;
+}
+
+.child03{
+    background-color: chartreuse;
+
+}
