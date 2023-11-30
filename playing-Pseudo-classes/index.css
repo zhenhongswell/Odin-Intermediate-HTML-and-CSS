@@ -1,0 +1,29 @@
+a:link{
+    background-color: blueviolet;
+}
+
+a:visited{
+    color: chartreuse;
+}
+
+a::selection{
+    background-color: burlywood;
+}
+input[type="text"]{
+    display: block;
+}
+input:disabled{
+    background-color: black;
+}
+input:enabled{
+    background-color: blanchedalmond;
+}
+
+
+input[type="checkbox"]:checked{
+    outline: 2px solid red;
+}
+
+input:indeterminate + label{
+    background-color: blue;
+}
