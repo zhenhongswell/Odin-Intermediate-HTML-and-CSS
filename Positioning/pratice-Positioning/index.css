@@ -1,20 +1,29 @@
-.parent{
+div[class*="parent"]{
+    position: relative;
+
+
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     background-color: chocolate;
     padding: 10px;
+    height: 70vh;
     border: 5px solid blue;
 }
 
 .child01{
-    
     background-color: aqua;
     position: relative;
-    left:10px;
+    /* left:10px; */
     z-index: 0;
 }
 
 .child02{
+    /* position: relative; */
+    /* position: absolute; */
+    /* position: fixed; */
+    position: sticky;
+    height: 20px;
+    top: 10px;
     background-color: blanchedalmond;
 }
 
