@@ -1,0 +1,24 @@
+:root.dark{
+    --custom-background-color: black;
+    --custom-color: white;
+}
+
+:root.light{
+    --custom-background-color: white;
+    --custom-color: black;
+}
+
+.container{
+    background-color: var(--custom-background-color);
+    color: var(--custom-color);
+}
+
+.toggleTheme{
+    padding: 5px;
+    width: fit-content;
+    border-radius: 20px;
+    
+    border: 2px solid var(--custom-color);
+    background-color: var(--custom-background-color);
+}
+

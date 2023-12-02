@@ -1,0 +1,37 @@
+:root {
+    --main-color: red;
+  }
+
+.cool-paragraph {
+    --main-color:blue;
+    color: var(--main-color);
+}
+
+.exciting-paragraph {
+    background-color: var(--main-color);
+}
+
+.parent{
+    --custom-bg-color:red;
+
+    /* color:var(--custom-bg-color); */
+}
+
+.child01{
+    
+    color:var(--custom-bg-color);
+}
+
+.child02{
+    background-color: var(--main-color);
+}
+
+.fallback {
+    --color-text: white;
+    /* --undeclared-property:blue; */
+    /* --undeclared-again: blue; */
+    background-color: var(--undeclared-property, black);
+    color: var(--undeclared-again, var(--color-text,yellow));
+}
+
+
