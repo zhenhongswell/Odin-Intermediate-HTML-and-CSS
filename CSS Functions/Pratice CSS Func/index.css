@@ -1,0 +1,12 @@
+.Block{
+    width:calc(100px + 10vw);
+    height:clamp(200px,50vh,1000px);
+    font-size: 2rem;
+    background-color: brown;
+    border: 10px solid blueviolet;
+}
+
+
+.child{
+    font-size: 3rem;
+}
