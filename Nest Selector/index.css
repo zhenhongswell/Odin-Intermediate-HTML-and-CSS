@@ -1,0 +1,13 @@
+.parent{
+    background-color: aqua;
+
+    .child {
+        background-color: brown;
+    }
+    /* & div{
+        background-color: aquamarine;
+        & div{
+            background-color: bisque;
+        }
+    } */
+}
