@@ -1,0 +1,12 @@
+.message-box{
+    display: flex;
+    /* & label{
+        display: block;
+    } */
+    /* background-color: aquamarine; */
+}
+
+
+.message-label{
+    /* border: 5px solid red; */
+}
