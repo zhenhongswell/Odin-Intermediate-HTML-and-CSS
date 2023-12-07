@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other form controls</title>
+    <style>
+        textarea {
+          width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <p>
+            <label for="comment">Add a comment here:</label>
+            <textarea class="textarea" cols="30" rows="10">
+                This is my default content.
+            </textarea>
+        </p>
+        <p>
+            <button class="submit" type="submit">Submit me!</button>
+        </p>
+    </form>
+
+    <select id="groups" name="groups">
+        <optgroup label="fruits">
+            <option>Banana</option>
+            <option selected>Cherry</option>
+            <option>Lemon</option>
+        </optgroup>
+        <optgroup label="vegetables">
+            <option>Carrot</option>
+            <option>Eggplant</option>
+            <option>Potato</option>
+        </optgroup>
+    </select>
+
+    <select id="multi" name="multi" multiple size="2">
+        <optgroup label="fruits">
+          <option>Banana</option>
+          <option selected>Cherry</option>
+          <option>Lemon</option>
+        </optgroup>
+        <optgroup label="vegetables">
+          <option>Carrot</option>
+          <option>Eggplant</option>
+          <option>Potato</option>
+        </optgroup>
+    </select>
+
+    <progress max="100" value="50">50/100</progress>
+    
+
+    <script>
+        const textareaContent = document.querySelector('.textarea');
+        const submitBtn = document.querySelector('.submit');
+        console.log(textareaContent.value);
+        submitBtn.addEventListener('click',()=>{
+            console.log(textareaContent.value);
+        })
+
+    </script>
+      
+</body>
+</html>
