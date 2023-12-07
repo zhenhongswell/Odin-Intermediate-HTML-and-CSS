@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <section>
+        <form action="">
+            <p>
+                <label for="data">Data:</label>
+                <input id="data" type="text" placeholder="enter the data..." value="some data" spellcheck="true">
+            </p>
+            <p>
+                <input type="text" id="comment" name="comment" value="I'm a text field" />
+
+                <input type="hidden" id="timestamp" name="timestamp" value="1286705410" />
+
+                <input type="checkbox" id="questionOne" name="subscribe" value="yes"  />
+            </p>
+            <p>
+                <label for="file">File:</label>
+                <input type="file" name="file" id="file" accept="image/*" multiple />
+            </p>
+            <p>
+                <label for="search">Search:</label>
+                <input type="search" id="search" name="search" />
+            </p>
+            <p>
+                <label for="url">Url:</label>
+                <input type="url" id="url" name="url" />
+            </p>
+            <p>
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="age" min="1" max="10" step="2" />
+            </p>
+            <p>
+                <label for="pennies">Pennies:</label>
+                <input type="number" name="change" id="pennies" min="0" max="1" step="0.01" />
+            </p>
+            <p>
+                <label for="price">Choose a maximum house price: </label>
+                <input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000" />
+                <output class="price-output" for="price"></output>
+            </p>
+            <p>
+                <input type="datetime-local" name="datetime" id="datetime" />
+                <input type="month" name="month" id="month" />
+                <input type="time" name="time" id="time" />
+                <input type="week" name="week" id="week" />
+            </p>
+
+            <p>
+                <label for="myDate">When are you available this summer?</label>
+                <input type="date" name="myDate" min="2013-06-01" max="2013-08-31" step="7" id="myDate" />
+            </p>
+            <p>
+                <input type="color" name="color" id="color" />
+            </p>
+            <script>
+                const price = document.querySelector("#price");
+                const output = document.querySelector(".price-output");
+
+                output.textContent = price.value;
+
+                price.addEventListener("input", () => {
+                    output.textContent = price.value;
+                });
+            </script>
+            
+            
+        </form>
+    </section>    
+</body>
+</html>
