@@ -1,0 +1,80 @@
+/* input:required {
+    border: 2px solid black;
+  }
+  
+input:optional {
+    border: 2px solid silver;
+}
+
+input:hover{
+    background-color: aliceblue;
+}
+
+input:focus{
+    background-color: antiquewhite;
+}
+
+input:active{
+    background-color: aqua;
+} */
+
+
+input[type="radio"]::before {
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: red;
+    font-size: 1.2em;
+    transform: translate(3px, 3px) scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in;
+  }
+  
+input[type="radio"]:checked::before {
+    transform: translate(3px, 3px) scale(1);
+    transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+
+fieldset > div {
+    margin-bottom: 20px;
+    display: flex;
+    /* flex-direction: column; */
+    flex-flow: row wrap;
+}
+
+input + span {
+    position: relative;
+  }
+  
+input:required+span::after {
+    font-size: 0.7rem;
+    position: absolute;
+    content: "required";
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    top: -26px;
+    left: -70px;
+}
+
+input + span::before {
+    position: absolute;
+    right: -20px;
+    top: 5px;
+  }
+  
+input:invalid {
+    border: 2px solid red;
+}
+
+input:invalid+span::before {
+    content: "✖";
+    color: red;
+}
+
+input:valid+span::before {
+    content: "✓";
+    color: green;
+}

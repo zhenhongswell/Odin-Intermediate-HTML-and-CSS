@@ -8,6 +8,14 @@
         textarea {
           width: 50px;
         }
+        fieldset{
+            position: relative;
+        }
+        legend{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
     </style>
 </head>
 <body>
@@ -51,6 +59,14 @@
 
     <progress max="100" value="50">50/100</progress>
     
+
+    <fieldset>
+        <legend>Legend</legend>
+        <p>
+            <label for="text"></label>
+            <input type="text" id="text">
+        </p>
+    </fieldset>
 
     <script>
         const textareaContent = document.querySelector('.textarea');
