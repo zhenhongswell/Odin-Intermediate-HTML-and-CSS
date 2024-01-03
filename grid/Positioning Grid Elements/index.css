@@ -1,0 +1,19 @@
+.container {
+    display: grid;
+    grid-template-rows: [start]100px [row_2]100px [row_3]100px [end];
+    grid-template-columns: [start]100px [col_2]100px [col_3]100px [end];
+  }
+  
+  .item {
+    background-color: orange;
+    border: 1px solid black;
+    text-align: center;
+  }
+  
+.first-row {
+    background-color: pink;
+}
+  
+.last-column {
+    background-color: lightblue;
+}
