@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex on item</title>
+</head>
+<body>
+    <div class="control">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <div class="scrubber"></div>
+        <button>4</button>
+        <button>5</button>
+    </div>
+    <style>
+        .control{
+            margin:200px 0;
+            /* display: flex; */
+            display: grid;
+            grid-template-columns: auto auto auto 1fr auto auto;
+            align-items: center;
+        }
+
+        .scrubber{
+            background-color: #BADA55;
+            height: 10px;
+            min-width: 100px;
+            border-radius: 10px;
+            /* flex-grow: 1; */
+        }
+
+        .control{
+            /* display: grid;
+            grid-template-columns: 1fr 4fr 1fr; */
+        }
+    </style>
+</body>
+</html>
